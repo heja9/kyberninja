@@ -1,0 +1,11 @@
+#slaid x, ssh ühenduse loomine PI-sse:
+ssh kasutaja@IP aadress
+#uuenda OS
+sudo apt-get update && sudo apt-get upgrade -y
+#Lae alla installer ja paigalda:
+sudo curl -sSL https://install.pi-hole.net | bash
+
+
+
+#lõpus uninstall
+pihole uninstall
