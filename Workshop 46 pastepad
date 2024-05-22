@@ -1,10 +1,20 @@
-#slaid x, ssh ühenduse loomine PI-sse:
+#"PI ühendamine" testi laptopis ühendust PI-ga. CMD aknasse kirjuta:
+ping kyberninjaX (asenda X enda PI numbriga)
+
+#"PI-hole install #1", ssh ühenduse loomine PI-sse:
 ssh kasutaja@IP aadress
 #uuenda OS
 sudo apt-get update && sudo apt-get upgrade -y
 #Lae alla installer ja paigalda:
 sudo curl -sSL https://install.pi-hole.net | bash
 
+#"PI-hole seadistamine #3" - lisame adlis
+https://adblock.ee/list.php
+
+#"Olulised pihole käsurea käsud". Paroolivahetus, uuendamine ja staatuse kontroll
+pihole –a –p
+pihole –up
+pihole status
 
 
 #lõpus uninstall
